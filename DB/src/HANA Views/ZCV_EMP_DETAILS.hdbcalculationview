@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Calculation:scenario xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Calculation="http://www.sap.com/ndb/BiModelCalculation.ecore" id="Demo1.DB.HANA Views::ZCV_EMP_DETAILS" applyPrivilegeType="NONE" dataCategory="CUBE" schemaVersion="3.0" outputViewType="Aggregation" cacheInvalidationPeriod="NONE" enforceSqlExecution="false">
+<descriptions defaultDescription="Employees Detail Views"/>
+<localVariables/>
+<variableMappings/>
+<dataSources>
+  <DataSource id="Demo1.DB.Table::EMP_DET">
+    <resourceUri>Demo1.DB.Table::EMP_DET</resourceUri>
+  </DataSource>
+</dataSources>
+<calculationViews>
+  <calculationView xsi:type="Calculation:ProjectionView" id="Projection_1">
+    <viewAttributes>
+      <viewAttribute id="EMP_ID"/>
+      <viewAttribute id="EMP_NAME"/>
+      <viewAttribute id="EMP_AGE"/>
+      <viewAttribute id="EMP_J_DATE"/>
+      <viewAttribute id="EMP_B_GROUP"/>
+      <viewAttribute id="EMP_GENDER"/>
+      <viewAttribute id="EMP_SALARY"/>
+      <viewAttribute id="EMP_DEP"/>
+    </viewAttributes>
+    <calculatedViewAttributes/>
+    <restrictedViewAttributes/>
+    <input node="Demo1.DB.Table::EMP_DET">
+      <mapping xsi:type="Calculation:AttributeMapping" target="EMP_ID" source="EMP_ID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="EMP_NAME" source="EMP_NAME"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="EMP_AGE" source="EMP_AGE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="EMP_J_DATE" source="EMP_J_DATE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="EMP_B_GROUP" source="EMP_B_GROUP"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="EMP_GENDER" source="EMP_GENDER"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="EMP_SALARY" source="EMP_SALARY"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="EMP_DEP" source="EMP_DEP"/>
+    </input>
+  </calculationView>
+</calculationViews>
+<logicalModel id="Projection_1">
+  <attributes>
+    <attribute id="EMP_ID" order="1" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="EMP_ID"/>
+      <keyMapping columnObjectName="Projection_1" columnName="EMP_ID"/>
+    </attribute>
+    <attribute id="EMP_NAME" order="2" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="EMP_NAME"/>
+      <keyMapping columnObjectName="Projection_1" columnName="EMP_NAME"/>
+    </attribute>
+    <attribute id="EMP_AGE" order="3" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="EMP_AGE"/>
+      <keyMapping columnObjectName="Projection_1" columnName="EMP_AGE"/>
+    </attribute>
+    <attribute id="EMP_J_DATE" order="4" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="EMP_J_DATE"/>
+      <keyMapping columnObjectName="Projection_1" columnName="EMP_J_DATE"/>
+    </attribute>
+    <attribute id="EMP_B_GROUP" order="5" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="EMP_B_GROUP"/>
+      <keyMapping columnObjectName="Projection_1" columnName="EMP_B_GROUP"/>
+    </attribute>
+    <attribute id="EMP_GENDER" order="6" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="EMP_GENDER"/>
+      <keyMapping columnObjectName="Projection_1" columnName="EMP_GENDER"/>
+    </attribute>
+    <attribute id="EMP_DEP" order="8" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="EMP_DEP"/>
+      <keyMapping columnObjectName="Projection_1" columnName="EMP_DEP"/>
+    </attribute>
+  </attributes>
+  <calculatedAttributes/>
+  <baseMeasures>
+    <measure id="EMP_SALARY" order="7" aggregationType="sum" measureType="simple">
+      <descriptions defaultDescription="EMP_SALARY"/>
+      <measureMapping columnObjectName="Projection_1" columnName="EMP_SALARY"/>
+    </measure>
+  </baseMeasures>
+  <calculatedMeasures/>
+  <restrictedMeasures/>
+  <localDimensions/>
+</logicalModel>
+<layout>
+  <shapes>
+    <shape expanded="true" modelObjectName="Output" modelObjectNameSpace="MeasureGroup">
+      <upperLeftCorner x="92" y="112"/>
+    
+      <rectangleSize width="160"/>
+    </shape>
+  
+    <shape expanded="true" modelObjectName="Projection_1" modelObjectNameSpace="CalculationView">
+      <upperLeftCorner x="92" y="217"/>
+      <rectangleSize height="30" width="160"/>
+    </shape>
+  </shapes>
+</layout>
+</Calculation:scenario>

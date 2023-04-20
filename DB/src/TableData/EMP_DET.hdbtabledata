@@ -1,0 +1,25 @@
+{
+    "format_version": 1,
+    "imports": [
+        {
+            "target_table": "Demo1.DB.Table::EMP_DET",
+            "source_data": {
+                "data_type": "CSV",
+                "file_name": "Demo1.DB.File::EMP_DETAILS.csv",
+                "has_header": true
+            },
+            "import_settings": {
+                "import_columns": [
+                    "EMP_ID",
+					"EMP_NAME",
+					"EMP_AGE",
+					"EMP_J_DATE",
+				    "EMP_B_GROUP",
+	                "EMP_GENDER",
+					"EMP_SALARY",
+					"EMP_DEP"
+                ]
+            }
+        }
+    ]
+}
