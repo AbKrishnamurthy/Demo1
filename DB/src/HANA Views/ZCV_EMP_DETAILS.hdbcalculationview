@@ -22,16 +22,7 @@
     </viewAttributes>
     <calculatedViewAttributes/>
     <restrictedViewAttributes/>
-    <input node="Demo1.DB.Table::EMP_DET">
-      <mapping xsi:type="Calculation:AttributeMapping" target="EMP_ID" source="EMP_ID"/>
-      <mapping xsi:type="Calculation:AttributeMapping" target="EMP_NAME" source="EMP_NAME"/>
-      <mapping xsi:type="Calculation:AttributeMapping" target="EMP_AGE" source="EMP_AGE"/>
-      <mapping xsi:type="Calculation:AttributeMapping" target="EMP_J_DATE" source="EMP_J_DATE"/>
-      <mapping xsi:type="Calculation:AttributeMapping" target="EMP_B_GROUP" source="EMP_B_GROUP"/>
-      <mapping xsi:type="Calculation:AttributeMapping" target="EMP_GENDER" source="EMP_GENDER"/>
-      <mapping xsi:type="Calculation:AttributeMapping" target="EMP_SALARY" source="EMP_SALARY"/>
-      <mapping xsi:type="Calculation:AttributeMapping" target="EMP_DEP" source="EMP_DEP"/>
-    </input>
+    <input node="Demo1.DB.Table::EMP_DET"/>
   </calculationView>
 </calculationViews>
 <logicalModel id="Projection_1">
@@ -56,8 +47,9 @@
       <descriptions defaultDescription="EMP_B_GROUP"/>
       <keyMapping columnObjectName="Projection_1" columnName="EMP_B_GROUP"/>
     </attribute>
-    <attribute id="EMP_GENDER" order="6" displayAttribute="false" attributeHierarchyActive="false">
+    <attribute id="EMP_GENDER" order="6" displayAttribute="false" attributeHierarchyActive="false" semanticType="empty">
       <descriptions defaultDescription="EMP_GENDER"/>
+      <maskingExpression>'XXXXX'</maskingExpression>
       <keyMapping columnObjectName="Projection_1" columnName="EMP_GENDER"/>
     </attribute>
     <attribute id="EMP_DEP" order="8" displayAttribute="false" attributeHierarchyActive="false">
